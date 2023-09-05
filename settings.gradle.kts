@@ -1,1 +1,1 @@
-rootProject.name = "fp-with-avar"
+rootProject.name = "fp-with-vavr"
