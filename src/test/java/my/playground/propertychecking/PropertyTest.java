@@ -17,12 +17,12 @@ public class PropertyTest {
                 .assertIsSatisfied();
 
 
-        Arbitrary<Integer> nums = Arbitrary.ofAll(Gen.choose(1, 10));
+        Arbitrary<Integer> nums = Arbitrary.ofAll(Gen.choose(5, 10));
         Property.def("x >= 5")
                 .forAll(nums)
-                .suchThat(x -> x > 5)
+                .suchThat(x -> x >= 5)
                 .check()
-                .assertIsFalsified();
+                .assertIsSatisfied();
     }
 
 }

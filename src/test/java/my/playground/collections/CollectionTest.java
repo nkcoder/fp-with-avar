@@ -1,4 +1,4 @@
-package my.playground.value;
+package my.playground.collections;
 
 import io.vavr.collection.List;
 import io.vavr.collection.Stream;
