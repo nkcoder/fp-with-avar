@@ -3,6 +3,7 @@ package my.playground.value;
 import io.vavr.control.Either;
 import org.junit.jupiter.api.Test;
 
+import static my.playground.value.EitherContainer.divide;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -23,11 +24,5 @@ public class EitherTest {
         assertEquals("Error: divide by zero", result.getLeft());
     }
 
-    private Either<String, Integer> divide(Integer x, Integer y) {
-        if (y == 0) {
-            return Either.left("Error: divide by zero");
-        } else {
-            return Either.right(x / y);
-        }
-    }
+
 }
